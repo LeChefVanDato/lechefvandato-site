@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-<title>Chef Vandato - Boutique eBooks Santé & Recettes Gratuites</title>
+<meta name="description" content="✅ Recettes diabétiques testées par un chef CAP cuisine diabétique. HbA1c -0,8 point ! eBooks pratiques + 3 recettes gratuites. Budget maîtrisé." />
+<title>Recettes Diabétiques Économiques | Chef Vandato - eBooks & Conseils</title>
 <style>
   body {
     font-family: sans-serif;
@@ -123,6 +124,100 @@
   }
   .cover-row img:hover {
     transform: scale(1.8);
+  }
+
+  /* SECTION AVANT-PREMIÈRE */
+  .avant-premiere-section {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .avant-premiere-section::before {
+    content: "🔥";
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: #fff;
+    color: #ff6b6b;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  .avant-premiere-section h2 {
+    color: white;
+    font-size: 2.2rem;
+    margin: 20px 0 15px 0;
+  }
+
+  .avant-premiere-content {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+  }
+
+  .avant-premiere-form {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 25px 0;
+    color: #333;
+  }
+
+  .avant-premiere-form h3 {
+    color: #ff6b6b;
+    margin-top: 0;
+    font-size: 1.4rem;
+  }
+
+  .avant-premiere-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+
+  .avant-premiere-form input:focus {
+    border-color: #ff6b6b;
+    outline: none;
+  }
+
+  .button-avant-premiere {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+    padding: 15px 30px;
+    margin-top: 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: none;
+    width: 100%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .button-avant-premiere:hover {
+    background: linear-gradient(135deg, #ee5a52, #dc4545);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
   }
   
   /* SECTION GUIDE GRATUIT */
@@ -430,6 +525,16 @@
     align-items: center;
     justify-content: center;
   }
+
+  .thank-you-avant-premiere {
+    display: none;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+  }
   
   .thank-you-container {
     max-width: 600px;
@@ -444,12 +549,15 @@
     font-size: 60px;
     margin-bottom: 20px;
   }
-  .thank-you-page h1, .thank-you-guide h1 {
+  .thank-you-page h1, .thank-you-guide h1, .thank-you-avant-premiere h1 {
     color: #d4a019;
     margin-bottom: 20px;
   }
   .thank-you-guide h1 {
     color: #28a745;
+  }
+  .thank-you-avant-premiere h1 {
+    color: #ff6b6b;
   }
   .download-section {
     background: #f0f8ff;
@@ -480,6 +588,12 @@
   }
   .thank-download-button.guide:hover {
     background: #218838;
+  }
+  .thank-download-button.avant-premiere {
+    background: #ff6b6b;
+  }
+  .thank-download-button.avant-premiere:hover {
+    background: #ee5a52;
   }
   .bonus-section {
     background: #fff3cd;
@@ -538,6 +652,19 @@
       padding: 5px 8px;
       margin: 3px auto;
       min-width: 120px;
+    }
+
+    .avant-premiere-section {
+      padding: 15px 10px;
+      margin: 20px 5px;
+    }
+
+    .avant-premiere-section h2 {
+      font-size: 14px;
+    }
+
+    .avant-premiere-form {
+      padding: 15px;
     }
     
     .guide-section {
@@ -644,7 +771,7 @@
       font-size: 30px;
     }
     
-    .thank-you-page h1, .thank-you-guide h1 {
+    .thank-you-page h1, .thank-you-guide h1, .thank-you-avant-premiere h1 {
       font-size: 14px;
     }
     
@@ -718,7 +845,7 @@ gtag('config', 'G-82G5HGXVZK');
 <body>
 <div id="video-container">
   <video id="introVideo" src="large_large.mp4" autoplay muted playsinline onended="showMainContent()" onclick="showMainContent()" style="cursor: pointer;"></video>
-  <button onclick="showMainContent()" style="position: absolute; top: 20px; right: 20px; background: rgba(212, 160, 25, 0.9); color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-weight: bold;">Passer la vidéo ⏭️</button>
+  <button onclick="showMainContent()" style="position: absolute; top: 20px; right: 20px; background: rgba(212, 160, 25, 0.9); color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-weight: bold;">Passer la vidéo ⭐️</button>
 </div>
 
 <div id="main-content" style="display:none;">
@@ -834,20 +961,65 @@ gtag('config', 'G-82G5HGXVZK');
     <button class="button-close" onclick="toggleAbout()">Fermer</button>
   </div>
 
+  <!-- SECTION AVANT-PREMIÈRE -->
+  <div class="avant-premiere-section">
+    <h2>🆕 NOUVEAU ! Médaillons de Porc Sauce Morilles</h2>
+    
+    <div class="avant-premiere-content">
+      <img src="medaillons-porc-morilles.jpg" alt="Médaillons de porc sauce morilles" style="width: 100%; max-width: 400px; border-radius: 12px; margin-bottom: 15px;" />
+      
+      <p style="font-size: 1.2rem; margin: 15px 0; line-height: 1.5;">
+        <strong>🎁 EXCLUSIVITÉ :</strong> Cette recette fera partie de mon <strong>nouvel ebook</strong> qui sort bientôt !<br>
+        <em>Tu peux la découvrir en avant-première dès maintenant...</em>
+      </p>
+      
+      <div style="background: rgba(255,255,255,0.2); padding: 15px; border-radius: 10px; margin: 20px 0;">
+        <p style="margin: 0; font-size: 1rem;">
+          ✅ Version diabétique parfaite<br>
+          ✅ Sauce crémeuse SANS farine<br>
+          ✅ Technique de chef révélée<br>
+          ✅ Prêt en 25 minutes
+        </p>
+      </div>
+    </div>
+
+    <div class="avant-premiere-form">
+      <h3>🎯 Accès Exclusif à l'Avant-Première</h3>
+      
+      <form name="avant-premiere-porc" netlify netlify-honeypot="bot-field" method="POST" onsubmit="return handleAvantPremiereSubmit(event)">
+        <input type="hidden" name="form-name" value="avant-premiere-porc">
+        <input type="hidden" name="recette" value="Médaillons de Porc Sauce Morilles - Avant-Première">
+        <input type="hidden" name="bot-field">
+        
+        <input type="text" name="prenom" placeholder="Ton prénom" required>
+        <input type="email" name="email" placeholder="Ton email" required>
+        
+        <button type="submit" class="button-avant-premiere">
+          🔓 DÉCOUVRIR LA RECETTE EN EXCLUSIVITÉ
+        </button>
+      </form>
+      
+      <p style="font-size: 0.9rem; color: #666; margin: 15px 0 0 0; font-style: italic;">
+        + Tu seras prévenu(e) en priorité de la sortie de mon nouvel ebook !
+      </p>
+    </div>
+  </div>
+
   <div class="cover-container">
     <div class="cover-row">
       <img src="manger_sain.png" alt="Manger sain" />
       <img src="manger_sain_finale.png" alt="Manger sain finale" />
     </div>
-    <a href="https://buy.stripe.com/cNi5kEb3vguC66v4aodEs06" target="_blank" class="button-buy">Acheter maintenant</a>
-    <div class="price-note">Prix de lancement: Pack 2 ebooks 15€ jusqu'au 30/08/2025. Prix normal : 17,90€ chacun après.</div>
+    <a href="https://buy.stripe.com/7sYbJ2c7zemu8eDeP2dEs0a" target="_blank" class="button-buy">Acheter maintenant</a>
+    <div class="price-note">12,99€</div>
 
     <div class="cover-row">
       <img src="delices_sucres.png" alt="Délices sucrés" />
       <img src="delices_sucres_finale.png" alt="Délices sucrés finale" />
     </div>
-    <a href="https://buy.stripe.com/7sY00kefHa6edyXdKYdEs03" target="_blank" class="button-buy">Acheter maintenant</a>
-    <div class="price-note">Prix de lancement: Pack 2 ebooks 15€ jusqu'au 30/08/2025. Prix normal : 17,90€ chacun après.</div>
+    <a href="https://buy.stripe.com/7sYbJ2c7zemu8eDeP2dEs0a" target="_blank" class="button-buy">Acheter maintenant</a>
+    <div class="price-note">12,99€</div>
+  </div>
 
   <!-- NOUVELLE SECTION GUIDE GRATUIT -->
   <div id="guide-section" class="guide-section">
@@ -959,6 +1131,84 @@ Toute représentation ou reproduction intégrale ou partielle faite sans le cons
   </div>
 </div>
 
+<!-- PAGE DE REMERCIEMENT AVANT-PREMIÈRE -->
+<div id="thank-you-avant-premiere" class="thank-you-avant-premiere">
+  <div class="thank-you-container">
+    <div class="success-icon">🔥</div>
+    <h1>AVANT-PREMIÈRE DÉBLOQUÉE !</h1>
+    <p>Bravo ! Tu fais partie des privilégiés qui découvrent cette recette en exclusivité !</p>
+    
+    <div class="download-section">
+      <h3>🎁 Ta recette exclusive :</h3>
+      <h2 style="color: #ff6b6b; margin: 20px 0;">Médaillons de Porc Sauce Morilles</h2>
+      
+      <div style="background: #f8f9fa; padding: 25px; border-radius: 15px; text-align: left; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        
+        <h3 style="color: #ff6b6b; text-align: center; margin-top: 0;">📋 INGRÉDIENTS (2 personnes)</h3>
+        <ul style="line-height: 1.6; margin: 15px 0;">
+          <li><strong>400g de filet de porc</strong> (coupé en médaillons épais)</li>
+          <li><strong>200g de morilles</strong> (fraîches ou réhydratées)</li>
+          <li><strong>200ml de crème fraîche épaisse</strong> (30% MG)</li>
+          <li><strong>1 échalote</strong> finement hachée</li>
+          <li><strong>2 gousses d'ail</strong> écrasées</li>
+          <li><strong>100ml de vin blanc sec</strong></li>
+          <li><strong>2 cuil. à soupe d'huile d'olive</strong></li>
+          <li><strong>Sel, poivre</strong> du moulin</li>
+          <li><strong>Persil plat</strong> pour la finition</li>
+        </ul>
+
+        <h3 style="color: #ff6b6b; text-align: center; margin: 25px 0 15px 0;">👨‍🍳 PRÉPARATION (25 min)</h3>
+        
+        <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #ff6b6b;">
+          <h4 style="color: #ff6b6b; margin-top: 0;">🔥 ÉTAPE 1 - Préparation (5 min)</h4>
+          <p>Sortir la viande 20 min avant cuisson. Nettoyer les morilles, les couper en deux. Saler et poivrer les médaillons des deux côtés.</p>
+        </div>
+
+        <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #ff6b6b;">
+          <h4 style="color: #ff6b6b; margin-top: 0;">🥩 ÉTAPE 2 - Cuisson des médaillons (8 min)</h4>
+          <p>Dans une poêle bien chaude avec l'huile, saisir les médaillons 3-4 min de chaque côté. <strong>Réserver au chaud</strong> sous papier alu.</p>
+        </div>
+
+        <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #ff6b6b;">
+          <h4 style="color: #ff6b6b; margin-top: 0;">🍄 ÉTAPE 3 - La sauce magique (12 min)</h4>
+          <p><strong>Dans la même poêle</strong> : faire revenir échalote et ail 2 min. Ajouter les morilles, cuire 3 min. Déglacer au vin blanc, laisser réduire de moitié. Ajouter la crème, laisser épaissir 5 min à feu doux.</p>
+        </div>
+
+        <div style="background: #28a745; color: white; padding: 20px; border-radius: 10px; margin: 20px 0;">
+          <h4 style="margin-top: 0;">💡 SECRET DE CHEF :</h4>
+          <p style="margin-bottom: 0;"><strong>Pas de farine dans cette sauce !</strong> La crème épaissit naturellement avec les sucs de cuisson. Résultat : onctuosité parfaite et index glycémique maîtrisé pour les diabétiques !</p>
+        </div>
+
+        <div style="background: white; padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #ff6b6b;">
+          <h4 style="color: #ff6b6b; margin-top: 0;">🍽️ ÉTAPE 4 - Finition (2 min)</h4>
+          <p>Remettre les médaillons dans la sauce 1 min pour les réchauffer. Rectifier l'assaisonnement. Parsemer de persil ciselé.</p>
+        </div>
+
+        <div style="background: #17a2b8; color: white; padding: 20px; border-radius: 10px; margin: 20px 0; text-align: center;">
+          <h4 style="margin-top: 0;">🩺 INFO DIABÈTE</h4>
+          <p style="margin-bottom: 0;"><strong>Glucides : ~3g par portion</strong> | Protéines : 35g | Lipides : 25g<br>
+          <em>Index glycémique très bas - Parfait pour la glycémie !</em></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bonus-section">
+      <h3>🎉 TU AS AIMÉ CETTE AVANT-PREMIÈRE ?</h3>
+      <p>Cette recette fera partie de mon <strong>nouvel ebook avec 50 recettes</strong> comme celle-ci !</p>
+      <p>Tu seras prévenu(e) en priorité de sa sortie + <strong>réduction exclusive</strong> !</p>
+      
+      <div style="background: #fff3cd; padding: 15px; border-radius: 10px; margin: 15px 0;">
+        <p style="margin: 0; font-weight: bold; color: #856404;">
+          📚 En attendant, découvre mes autres ebooks disponibles !
+        </p>
+      </div>
+      <p>👇 <a href="#" onclick="returnToHome()" style="color: #ff6b6b; font-weight: bold;">Voir mes ebooks actuels</a></p>
+    </div>
+
+    <p><a href="#" onclick="returnToHome()" class="return-link">← Retour à l'accueil du Chef Vandato</a></p>
+  </div>
+</div>
+
 <!-- PAGE DE REMERCIEMENT GUIDE -->
 <div id="thank-you-guide" class="thank-you-guide">
   <div class="thank-you-container">
@@ -967,7 +1217,7 @@ Toute représentation ou reproduction intégrale ou partielle faite sans le cons
     <p>Merci pour ta confiance ! Voici ton <strong>Guide des 10 Erreurs que J'ai Faites en Découvrant Mon Diabète</strong> :</p>
     
     <div class="download-section">
-      <h3>📥 Télécharge ton guide :</h3>
+      <h3>🔥 Télécharge ton guide :</h3>
       <a href="guide-10-erreurs-diabete.pdf" download class="thank-download-button guide">
         🎁 TÉLÉCHARGER LE GUIDE COMPLET
       </a>
@@ -1003,7 +1253,7 @@ Toute représentation ou reproduction intégrale ou partielle faite sans le cons
     <p>Merci pour votre intérêt ! Voici votre recette de <strong>Soupe miso aux légumes et tofu</strong> :</p>
     
     <div class="download-section">
-      <h3>📥 Téléchargez votre recette :</h3>
+      <h3>🔥 Téléchargez votre recette :</h3>
       <a href="entrée.pdf" download class="thank-download-button">
         🧺 Télécharger la recette de soupe miso
       </a>
@@ -1032,7 +1282,7 @@ Toute représentation ou reproduction intégrale ou partielle faite sans le cons
     <p>Merci pour votre confiance ! Voici votre recette de <strong>Cabillaud en papillote aux herbes fraîches</strong> :</p>
     
     <div class="download-section">
-      <h3>📥 Téléchargez votre recette :</h3>
+      <h3>🔥 Téléchargez votre recette :</h3>
       <a href="plat.pdf" download class="thank-download-button">
         🧺 Télécharger la recette de cabillaud
       </a>
@@ -1062,7 +1312,7 @@ Toute représentation ou reproduction intégrale ou partielle faite sans le cons
     <p>Félicitations ! Voici votre recette de <strong>Religieuse au café sans sucre ajouté</strong> :</p>
     
     <div class="download-section">
-      <h3>📥 Téléchargez votre recette :</h3>
+      <h3>🔥 Téléchargez votre recette :</h3>
       <a href="dessert.pdf" download class="thank-download-button">
         🧺 Télécharger la recette de religieuse
       </a>
@@ -1098,7 +1348,7 @@ Toute représentation ou reproduction intégrale ou partielle faite sans le cons
     <p>Voici votre ebook <strong>"Manger Sain sans Ruiner son Budget"</strong> :</p>
     
     <div class="download-section">
-      <h3>📥 Téléchargez votre ebook :</h3>
+      <h3>🔥 Téléchargez votre ebook :</h3>
       <a href="manger-sain-ebook-complet.pdf" download class="thank-download-button">
         📚 TÉLÉCHARGER L'EBOOK COMPLET (50 recettes)
       </a>
@@ -1123,7 +1373,7 @@ Toute représentation ou reproduction intégrale ou partielle faite sans le cons
     <p>Voici votre ebook <strong>"Délices Sucrés"</strong> :</p>
     
     <div class="download-section">
-      <h3>📥 Téléchargez votre ebook :</h3>
+      <h3>🔥 Téléchargez votre ebook :</h3>
       <a href="delices-sucres-ebook-complet.pdf" download class="thank-download-button">
         📚 TÉLÉCHARGER L'EBOOK COMPLET (Délices Sucrés)
       </a>
@@ -1174,6 +1424,7 @@ function hideAllThankYouPages() {
   document.getElementById('thank-you-cabillaud').style.display = 'none';
   document.getElementById('thank-you-religieuse').style.display = 'none';
   document.getElementById('thank-you-guide').style.display = 'none';
+  document.getElementById('thank-you-avant-premiere').style.display = 'none';
   document.getElementById('thank-you-manger-sain').style.display = 'none';
   document.getElementById('thank-you-delices-sucres').style.display = 'none';
 }
@@ -1302,6 +1553,36 @@ function handleGuideSubmit(event) {
   return false;
 }
 
+function handleAvantPremiereSubmit(event) {
+  console.log('Formulaire avant-première soumis');
+  event.preventDefault();
+  
+  const form = event.target;
+  const prenom = form.querySelector('input[name="prenom"]').value;
+  const email = form.querySelector('input[name="email"]').value;
+  
+  if (!prenom || !email) {
+    alert('Veuillez remplir tous les champs');
+    return false;
+  }
+  
+  // Soumission Netlify
+  if (window.location.hostname.includes('netlify') || window.location.hostname.includes('lechefvandato.com')) {
+    const formData = new FormData(form);
+    fetch('/', {
+      method: 'POST',
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
+    }).catch(() => {});
+  }
+  
+  setTimeout(() => {
+    showThankYouPage('avant-premiere');
+  }, 1000);
+  
+  return false;
+}
+
 function toggleAbout() {
   const aboutSection = document.getElementById('about');
   if (aboutSection.style.display === 'none' || aboutSection.style.display === '') {
@@ -1327,5 +1608,3 @@ window.addEventListener('load', initPage);
 
 </body>
 </html>
-
-
